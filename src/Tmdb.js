@@ -19,13 +19,13 @@ const basicFetch = async endpoint => {
 }
 
 export default {
-  getHomeList: async () => {
+  async getHomeList() {
     return [
       {
         slug: 'originals',
-        title: 'originais do netflix',
+        title: 'Originais do Netflix',
         items: await basicFetch(
-          `/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`
+          `/discover/tv?with_networks=213&language=pt-BR&api_key=${API_KEY}`
         )
       },
       {

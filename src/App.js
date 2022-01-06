@@ -5,7 +5,7 @@ import MovieRow from './components/MovieRow'
 import FeaturedMovie from './components/FeaturedMovie'
 import Header from './components/Header'
 
-export default () => {
+export default function App() {
   const [movieList, setMovieList] = useState([])
   const [featuredData, setFeaturedData] = useState(null)
   const [blackHeader, setBlackHeader] = useState(false)
@@ -47,9 +47,30 @@ export default () => {
       {featuredData && <FeaturedMovie item={featuredData} />}
       <section className="lists">
         {movieList.map((item, key) => (
-          <MovieRow Key={key} title={item.title} items={item.items} />
+          <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      <footer>
+        Feito por Carlos Eduardo pela aula do professor{' '}
+        <a href="https://www.youtube.com/channel/UCw9mYSlqKRXI6l4vH-tAYpQ">
+          <span>Bonieky</span>
+        </a>
+        <br />
+        Direitos de Imagem para Netflix
+        <br />
+        Dados utilizados da API do site{' '}
+        <a href="https://www.themoviedb.org/">
+          <span>themoviedb.org</span>
+        </a>
+      </footer>
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="Loading Films"
+          />
+        </div>
+      )}
     </div>
   )
 }
