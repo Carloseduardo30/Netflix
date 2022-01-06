@@ -51,7 +51,7 @@ export default function App() {
         ))}
       </section>
       <footer>
-        Feito por Carlos Eduardo pela aula do professor{' '}
+        Feito por Carlos Eduardo pela aula do professor
         <a href="https://www.youtube.com/channel/UCw9mYSlqKRXI6l4vH-tAYpQ">
           <span>Bonieky</span>
         </a>

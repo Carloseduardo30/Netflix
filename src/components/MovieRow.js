@@ -3,7 +3,7 @@ import './MovieRow.css'
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 export default function MovieRow({ title, items }) {
-  const [scrollX, setScrollX] = useState(-400)
+  const [scrollX, setScrollX] = useState(0)
   const handleLeftArrow = () => {
     let x = scrollX + Math.round(window.innerWidth / 2)
     if (x > 0) {
@@ -41,7 +41,7 @@ export default function MovieRow({ title, items }) {
             items.results.map((item, key) => (
               <div key={key} className="movieRow--item">
                 <img
-                  scr={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
                   alt={item.original_title}
                 />
               </div>

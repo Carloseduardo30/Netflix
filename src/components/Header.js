@@ -7,15 +7,15 @@ export default function Header({ black }) {
       <div className="header--logo">
         <a href="/">
           <img
-            src="https://commons.wikimedia.org/wiki/File:Logonetflix.png#/media/File:Logonetflix.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png"
             alt="Netflix"
           />
         </a>
         <div className="header--user"></div>
         <a href="/">
           <img
-            src="https://br.pinterest.com/pin/769763761288214223/"
-            alt="usuário"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt="User Avatar"
           />
         </a>
       </div>
